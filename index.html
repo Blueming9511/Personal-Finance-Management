@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+
+<body>
+    <!-- SIDE BAR -->
+    <nav class="sidebar close">
+        <header>
+            <div class="img-text">
+                <span><a href="#"><img src="img/logo.png" alt="logo"></a></span>
+            </div>
+
+            <div class="text header-text">
+                <span class="name">Fin</span>
+                <span class="detailed">Finance Tracker</span>
+            </div>
+            <box-icon class="chevron-right toggle" name='chevron-right' type='solid' color='#ffffff'></box-icon>
+        </header>
+
+        <!-- MENU OPTIONS  -->
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <!-- 
+                    <li class="nav-link">
+                        <a href="#">
+                            <box-icon class="bx search" name='search'></box-icon>
+                            <input class="input-search" type="search" placeholder="search...">
+                        </a>
+                    </li> -->
+                    <li class="nav-link">
+                        <a href="#" >
+                            <box-icon class="bx home-circle" name='home-circle' color="#000000"> </box-icon>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+
+                        <!-- <div class="sub-menu">
+                            <div class="noti">5</div>
+                            <box-icon class="chevron-right" name='chevron-right'></box-icon>
+                        </div> -->
+
+                        <span id="current-page"></span>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <box-icon class="bx bar-chart-square" name='bar-chart-square'></box-icon> <span
+                                class="text nav-text">Revenue</span>
+                        </a>
+
+
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <box-icon class="bx edit" name='edit'></box-icon> <span
+                                class="text nav-text">Planning</span>
+                        </a>
+
+
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <box-icon class="bx pie-chart" name='pie-chart-alt'></box-icon><span
+                                class="text nav-text">Analysis</span>
+                        </a>
+
+
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <box-icon class="bx wallet" name='wallet'></box-icon><span
+                                class="text nav-text">Wallet</span>
+                        </a>
+
+
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+
+                <a href="loginform.html">
+                    <box-icon class="bx log-out" name='log-out'></box-icon><span class="text nav-text">Log
+                        out</span>
+                </a>
+
+
+
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <!-- Javascript -->
+    <script>
+        const sidebar = document.querySelector(".sidebar"),
+            toggle = document.querySelector(".toggle"),
+            text = document.querySelector(".text");
+        toggle.addEventListener("click", () => {
+
+            sidebar.classList.toggle("close")
+        })
+    </script>
+
+    <!-- TOOLTIPS -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+
+</html>
