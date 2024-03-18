@@ -5,3 +5,5 @@ toggle.addEventListener("click", () => {
 
 sidebar.classList.toggle("close")
 })
+
+// test commit
